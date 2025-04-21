@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>imperius</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    /* Fondo degradado animado */
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(45deg, #000, #444, #222);
+      background-size: 400% 400%;
+      animation: gradientMove 15s ease infinite;
+      color: #eee;
+    }
+
+    @keyframes gradientMove {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    header {
+      text-align: center;
+      padding: 80px 20px 40px;
+      background-color: #111;
+    }
+
+    header h1 {
+      font-size: 4em;
+      color: #ccc;
+      letter-spacing: 8px;
+    }
+
+    .tagline {
+      font-size: 1.2em;
+      color: #666;
+      margin-top: 10px;
+    }
+
+    /* Barra de navegación */
+    nav {
+      text-align: center;
+      background-color: #111;
+      padding: 15px 0;
+    }
+
+    nav a {
+      color: #ccc;
+      text-decoration: none;
+      padding: 15px 30px;
+      font-size: 1.2em;
+      margin: 0 15px;
+      transition: background-color 0.3s;
+    }
+
+    nav a:hover {
+      background-color: #444;
+    }
+
+    section {
+      padding: 60px 30px;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    .quote {
+      font-size: 1.5em;
+      font-style: italic;
+      color: #999;
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    .poemas {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
+    }
+
+    .poema {
+      background-color: #111;
+      padding: 20px;
+      border: 1px solid #333;
+      border-radius: 10px;
+    }
+
+    .poema h3 {
+      color: #ccc;
+      margin-bottom: 10px;
+    }
+
+    .poema p {
+      font-size: 0.95em;
+      color: #bbb;
+    }
+
+    footer {
+      text-align: center;
+      padding: 40px 20px;
+      background-color: #111;
+      font-size: 0.9em;
+      color: #666;
+    }
+
+    /* Efecto para el contador de visitas */
+    #contador {
+      font-size: 1.5em;
+      color: #ccc;
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    /* Sección de blog */
+    .blog {
+      margin-top: 60px;
+    }
+
+    .entrada {
+      background-color: #111;
+      padding: 20px;
+      margin-bottom: 20px;
+      border: 1px solid #333;
+      border-radius: 10px;
+    }
+
+    .entrada h3 {
+      color: #ccc;
+    }
+
+    .entrada p {
+      color: #bbb;
+    }
+
+    /* Modo oscuro y claro */
+    body[data-theme="dark"] {
+      background-color: #000;
+      color: #eee;
+    }
+
+    body[data-theme="light"] {
+      background-color: #f4f4f4;
+      color: #333;
+    }
+
+    .theme-toggle {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      cursor: pointer;
+      font-size: 1.2em;
+      color: #ccc;
+    }
+
+  </style>
+</head>
+<body data-theme="dark">
+  <!-- Toggle Modo Oscuro/Claro -->
+  <div class="theme-toggle" onclick="toggleTheme()">🌙</div>
+
+  <header>
+    <h1>imperius</h1>
+    <p class="tagline">La sombra escribe en silencio</p>
+  </header>
+
+  <!-- Barra de navegación -->
+  <nav>
+    <a href="#sentimientos">Sentimientos silenciosos</a>
+    <a href="#sonidos">Sonidos de mi cabeza</a>
+    <a href="#beauty">Beauty</a>
+    <a href="#fragmentos">Fragmentos mentales</a>
+    <a href="#dias">Días de mis días</a>
+    <a href="#blog">Blog</a>
+  </nav>
+
+  <section id="sentimientos">
+    <h2>Sentimientos silenciosos</h2>
+    <div class="poemas">
+      <div class="poema">
+        <h3>Poema 1</h3>
+        <p>Aquí puedes escribir tu primer poema. Intenso, gris, como la noche que guarda secretos.</p>
+      </div>
+      <div class="poema">
+        <h3>Poema 2</h3>
+        <p>Otro espacio para lo que llevas dentro. Aquí los suspiros se transforman en versos.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="sonidos">
+    <h2>Sonidos de mi cabeza</h2>
+    <audio controls>
+      <source src="tu-musica.mp3" type="audio/mp3">
+      Tu navegador no soporta el elemento de audio.
+    </audio>
+  </section>
+
+  <section id="beauty">
+    <h2>Beauty</h2>
+    <div>
+      <img src="tu-foto.jpg" alt="Foto 1" style="width: 100%; max-width: 500px; margin: 0 auto; display: block;">
+    </div>
+  </section>
+
+  <section id="fragmentos">
+    <h2>Fragmentos mentales</h2>
+    <p>Recuerdos, pensamientos... fragmentos de lo que soy.</p>
+  </section>
+
+  <section id="dias">
+    <h2>Días de mis días</h2>
+    <p>Un espacio para reflexionar sobre cada día que pasa.</p>
+  </section>
+
+  <!-- Blog -->
+  <section id="blog">
+    <h2>Blog</h2>
+    <div class="blog">
+      <div class="entrada">
+        <h3>Entrada del Blog 1</h3>
+        <p>Este es tu primer post en el blog. Aquí puedes escribir sobre lo que te inspire.</p>
+      </div>
+      <div class="entrada">
+        <h3>Entrada del Blog 2</h3>
+        <p>Otro post interesante. Comparte tus pensamientos aquí.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 imperius | Página creada en Neocities</p>
+    <p id="contador">Visitas: 0</p>
+  </footer>
+
+  <script>
+    // Cambiar entre modo oscuro y claro
+    function toggleTheme() {
+      const body = document.querySelector('body');
+      const currentTheme = body.getAttribute('data-theme');
+      const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+      body.setAttribute('data-theme', newTheme);
+    }
+
+    // Simulación de contador de visitas (solo para mostrar cómo quedaría)
+    let visitas = 0;
+    setInterval(() => {
+      visitas++;
+      document.getElementById('contador').textContent = `Visitas: ${visitas}`;
+    }, 1000);
+  </script>
+</body>
+</html>
